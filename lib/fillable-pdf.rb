@@ -185,7 +185,6 @@ class FillablePDF
     @pdf_doc.isClosed
   end
 
-  private
 
   ##
   # Writes the contents of the modified fields to the previously opened PDF file.
@@ -197,6 +196,8 @@ class FillablePDF
     close
     @byte_stream.toByteArray
   end
+
+  private
 
   def pdf_field(key)
     field = @form_fields.get(key.to_s)
